@@ -1,5 +1,6 @@
 var frameCount = 0;
-var url = ""; // DEMO URL: http://www.alistapart.com
+var url = "";
+var demoURL = 'http://www.alistapart.com';
 var maxDeviceCount = 6;
 var _enabledDeviceCount = 0;
 var labels = ["","iPad","Galaxy S 3/4","iPhone 3GS","iPhone 5","Nexus One","Galaxy Nexus"];
@@ -15,7 +16,7 @@ $(document).ready(function(){
 	if(!!localStorage.getItem('MARWAV_last_used_url')) $('#iframe_url').val(localStorage.getItem('MARWAV_last_used_url'));
 
 	$('#iframe_url_demo').bind(clickOrTouchEvent,function(){
-		$('#iframe_url').val('http://www.alistapart.com');
+		$('#iframe_url').val(demoURL);
 		loadUpDeviceViews();
 	});
 
@@ -165,8 +166,7 @@ function addIframes(initFrames){
 		$('.iframe_container').each(function(e){
 			$('input[value=Refresh]',$(this)).bind('click touchstart',function(){
 				var iframeID = $(this).parent().find('iframe').attr('id');
-				// url = $(this).parent().find('iframe').attr('src'); // document.getElementById(iframeID).contentWindow.location.pathname; //document.getElementById(iframeID).contentWindow.location.href; //$(this).parent().find('iframe').location.href; //attr('src'); //alert('url:' + url);
-				$('#' + iframeID).attr('src',getUniqueURL()); //$('iframe').attr('src',url); // $('#' + iframeID).attr('src',iframeURL);
+				$('#' + iframeID).attr('src',getUniqueURL());
 
 			});
 			$('input[value=Rotate]',$(this)).bind('click touchstart',function(){
@@ -182,7 +182,7 @@ function addIframes(initFrames){
 
 		});
 
-		// if(console.clear) console.clear();
+		if(console.clear) console.clear();
 		refreshIFramesOrigin();
 
 		if(_enabledDeviceCount == 0){
