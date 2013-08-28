@@ -23,6 +23,4 @@ Consider this thing in super alpha state! A developer testing tool only for now 
 
 ## Screenshots
 
-![Screenshot 1](http://farm6.staticflickr.com/5550/9615146788_7159540269_c.jpg)
-
-![Screenshot 2](http://farm8.staticflickr.com/7442/9615146672_160a14da2e_c.jpg)
+![Screenshot 1](http://farm8.staticflickr.com/7442/9615146672_160a14da2e_c.jpg)
