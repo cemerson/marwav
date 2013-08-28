@@ -11,9 +11,9 @@ var clickOrTouchEvent = 'mouseup touchend';
 
 $(document).ready(function(){
 
-	$(window).resize(function()  {
-		refreshIFramesOrigin();
-	});
+	$(window).resize(function(){ refreshIFramesOrigin(); });
+
+	if(!!localStorage.getItem('MARWAV_last_used_url')) $('#iframe_url').val(localStorage.getItem('MARWAV_last_used_url'));
 
 	$('#iframe_url_demo').bind(clickOrTouchEvent,function(){
 		$('#iframe_url').val('http://www.alistapart.com');
@@ -32,15 +32,15 @@ $(document).ready(function(){
 	var checkboxHTML = "";
 	for(var d=1;d<labels.length;d++){
 
-		var _deviceIsEnabled = (localStorage.getItem('_device_'+d) == 'checked');
+		var _deviceIsEnabled = (localStorage.getItem('MARWAV_device_'+d) == 'checked');
 		var _checkedValue = "";
 		if(_deviceIsEnabled) _checkedValue = " checked ";
 
 		checkboxHTML += '<input type="checkbox" ' + _checkedValue + ' id="device_' + d + '"><label for="device_' + d + '">' + labels[d] + '</label>';
 	}
 
-	if(!!localStorage.getItem('_scale_selected_index')){
-		$('#iframe_scale').prop('selectedIndex', localStorage.getItem('_scale_selected_index'));
+	if(!!localStorage.getItem('MARWAV_scale_selected_index')){
+		$('#iframe_scale').prop('selectedIndex', localStorage.getItem('MARWAV_scale_selected_index'));
 	}
 
 	$('#device_checkboxes')
@@ -60,6 +60,8 @@ function refreshIFramesOrigin(){
 
 		report('TEST','--> refreshIFramesOrigin()..');
 		/*
+		TODO: Need to crunch numbers to figure out some minimum/allowed re-positioning when at 50%/25% scale.
+
 		$('#iframes').height()	894
 		$('#iframes').width() 	2332
 		window.innerHeight			629
@@ -93,9 +95,11 @@ function loadUpDeviceViews(){
 		// save settings for next refresh
 		for(var d=1;d<labels.length;d++){
 			var _deviceIsEnabled = ($('#device_' + d).is(':checked'));
-			if(_deviceIsEnabled) localStorage.setItem('_device_'+d,'checked');
+			if(_deviceIsEnabled) localStorage.setItem('MARWAV_device_'+d,'checked');
 		}
-		localStorage.setItem('_scale_selected_index',$('#iframe_scale').prop('selectedIndex'));
+		localStorage.setItem('MARWAV_scale_selected_index',$('#iframe_scale').prop('selectedIndex'));
+		localStorage.setItem('MARWAV_last_used_url',$('#iframe_url').val());
+
 
 
 
