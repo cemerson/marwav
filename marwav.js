@@ -1,7 +1,7 @@
 var frameCount = 0;
 var url = ""; // DEMO URL: http://www.alistapart.com
 var maxDeviceCount = 6;
-
+var _enabledDeviceCount = 0;
 var labels = ["","iPad","Galaxy S 3/4","iPhone 3GS","iPhone 5","Nexus One","Galaxy Nexus"];
 var focusedIframe = "";
 var scale = 100;
@@ -139,6 +139,7 @@ function addIframes(initFrames){
 		var _deviceIsEnabled = ($('#device_' + frameCount).is(':checked'));
 		var _deviceLabel = labels[frameCount];
 		if(_deviceIsEnabled){
+			_enabledDeviceCount ++;
 			window.console.log('Device (' + _deviceLabel + ') is enabled so initializing its <iframe> now...');
 			$('body #iframes').append('<div class="iframe_container" device_id="' + frameCount + '" id="iframe_container_'+
 																		frameCount + '""><iframe src=' + getUniqueURL() + ' id="frame_' +
@@ -183,6 +184,10 @@ function addIframes(initFrames){
 
 		// if(console.clear) console.clear();
 		refreshIFramesOrigin();
+
+		if(_enabledDeviceCount == 0){
+			alert('Did you forget to click a device checkbox?');
+		}
 
 	}
 
