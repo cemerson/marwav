@@ -15,9 +15,10 @@ This is just a hack/means of viewing a local or online web app in an assortment 
 
 ## Other Notes
  - Works great with [Chrome DevTools Autosave](https://github.com/NV/chrome-devtools-autosave) :) 
+ - Uses RawGitHub.com to link to the source JS/CSS files (so you only need the html file for now).
+ - After first use the URL, scale and device checkbox settings will be saved to and loaded from localStorage
  - This thing does have capacity to eat up fair amount of RAM/CPU - but most modern dev machines should be fine
  - The "Rotate" button and the Zoom/scale feature are both unfinished/buggy but do work partially.
- - Uses RawGitHub.com to link to the source JS/CSS files (so you only need the html file for now).
 
 Consider this thing in super alpha state! A developer testing tool only for now ...
 
