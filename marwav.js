@@ -95,6 +95,7 @@ function loadUpDeviceViews(){
 		// save settings for next refresh
 		for(var d=1;d<labels.length;d++){
 			var _deviceIsEnabled = ($('#device_' + d).is(':checked'));
+			localStorage.removeItem('MARWAV_device_'+d);
 			if(_deviceIsEnabled) localStorage.setItem('MARWAV_device_'+d,'checked');
 		}
 		localStorage.setItem('MARWAV_scale_selected_index',$('#iframe_scale').prop('selectedIndex'));
