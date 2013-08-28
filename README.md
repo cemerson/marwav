@@ -6,4 +6,12 @@ Marwav! The multiple aspect ratio web app viewer. Just a hack/means of viewing a
  - Works great with [Chrome DevTools Autosave](https://github.com/NV/chrome-devtools-autosave) :) 
  - Page will understandably eat up RAM/CPU at times
  - Zoom/scale feature pretty buggy atm - but works sorta.
- - Consider this thing in super alpha state! A developer testing tool only for now ...
+ - Current device sizes integrated:
+  - iPad
+  - iPhone 3GS
+  - iPhone 5
+  - Nexus One
+  - Galaxy Nexus
+  - Galaxy S 3/4
+
+Consider this thing in super alpha state! A developer testing tool only for now ...
