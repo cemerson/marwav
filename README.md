@@ -3,7 +3,7 @@ MARWAV!
 
 The multiple aspect ratio web app viewer. 
 
-This is just a hack/means of viewing a local or online web app in an assortment of device sizes all at once on one browser (Chrome) page. There are various Chrome extensions that let you view a site in a specifically-sized browser window, but I wanted a page that let me view and fix multiple devices at the same time. 
+This is just a hack/means of viewing a local or online web app in an assortment of device sizes all at once on one browser (Chrome) page. There are various Chrome extensions that let you view a site in a specifically-sized browser window, but I wanted a page that let me view and fix multiple devices at the same time. In a perfect world I'd have preferred to use some magic mirroring technology to keep the page load/CPU burden lighter - but for now this is really just a glorified stack of iframe windows.
 
 ## Current device sizes integrated:
   - iPad
@@ -18,7 +18,8 @@ This is just a hack/means of viewing a local or online web app in an assortment 
  - Uses RawGitHub.com to link to the source JS/CSS files (so you only need the html file for now).
  - After first use the URL, scale and device checkbox settings will be saved to and loaded from localStorage
  - This thing does have capacity to eat up fair amount of RAM/CPU - but most modern dev machines should be fine
- - The "Rotate" button and the Zoom/scale feature are both unfinished/buggy but do work partially.
+ - The "Rotate" button is very basic - may quirk out sometimes.
+ - The "Scale" pulldown/feature is pretty buggy. My advice - only use if you feel like trying to finish/fix the feature.
 
 Consider this thing in super alpha state! A developer testing tool only for now ...
 
