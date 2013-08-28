@@ -5,9 +5,8 @@ var maxDeviceCount = 6;
 var labels = ["","iPad","Galaxy S 3/4","iPhone 3GS","iPhone 5","Nexus One","Galaxy Nexus"];
 var focusedIframe = "";
 var scale = 100;
-var randomID = undefined;
+var randomID = new Date().getMilliseconds();
 var clickOrTouchEvent = 'mouseup touchend';
-
 
 $(document).ready(function(){
 
