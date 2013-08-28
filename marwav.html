@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en">
+
+<head id="" data-template-set="html5-reset">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="marwav.js"></script>
+  <link href="marwav.css" media="screen" rel="stylesheet" type="text/css">
+  <title>MARWAV! [Multiple Aspect Ratio Web App Viewer]</title>
+</head>
+
+<body>
+
+<div id="iframe_url_form">
+  <h1>MARWAV!<sup>Multiple Aspect Ratio Web App Viewer</sup></h1>
+  <input id="iframe_url" type='text' placeholder="e.g. file:///mysite.html or http://www.alistapart.com etc"
+    value="file:///index.html"/>
+  <input id="iframe_url_submit" type="button" value="Continue"/>
+  <input id="iframe_url_reset" type="button" value="Reset"/>
+  <br/>
+  <div id="device_checkboxes">
+    <input id="iframe_url_demo" type="button" value="Demo"/>
+    <select id="iframe_scale"><option value="100" selected>Zoom 100%</option><option value="50" >Zoom 50%</option><option value="25">Zoom 25%</option></select>
+  </div>
+</div>
+
+<div id="iframes"></div>
+
+</body>
+</html>
