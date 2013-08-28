@@ -181,7 +181,7 @@ function addIframes(initFrames){
 
 		});
 
-		if(console.clear) console.clear();
+		// if(console.clear) console.clear();
 		refreshIFramesOrigin();
 
 	}
