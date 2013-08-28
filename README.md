@@ -14,6 +14,7 @@ This is just a hack/means of viewing a local or online web app in an assortment 
   - Galaxy S 3/4
 
 ## Other Notes
+ - Can use http:// or file:/// URLs
  - Works great with [Chrome DevTools Autosave](https://github.com/NV/chrome-devtools-autosave) :) 
  - Uses RawGitHub.com to link to the source JS/CSS files (so you only need the html file for now).
  - After first use the URL, scale and device checkbox settings will be saved to and loaded from localStorage
