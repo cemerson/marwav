@@ -5,6 +5,11 @@ The multiple aspect ratio web app viewer.
 
 This is just a hack/means of viewing a local or online web app in an assortment of device sizes all at once on one browser (Chrome) page. There are various Chrome extensions that let you view a site in a specifically-sized browser window, but I wanted a page that let me view and fix multiple devices at the same time. In a perfect world I'd have preferred to use some magic mirroring technology to keep the page load/CPU burden lighter - but for now this is really just a glorified stack of iframe windows.
 
+## Usage
+Grab the marwav.html or just make a bookmark to here to try it out:
+
+    https://rawgithub.com/cemerson/marwav/master/marwav.html
+
 ## Current device sizes integrated:
   - iPad
   - iPhone 3GS
