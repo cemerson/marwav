@@ -7,8 +7,7 @@ This is just a hack/means of viewing a local or online web app in an assortment 
 
 ## Usage
 Grab the marwav.html or just make a bookmark to here to try it out:
-
-    https://rawgithub.com/cemerson/marwav/master/marwav.html
+- (https://rawgithub.com/cemerson/marwav/master/marwav.html)
 
 ## Current device sizes integrated:
   - iPad
