@@ -29,3 +29,7 @@ Consider this thing in super alpha state! A developer testing tool only for now 
 ![Screenshot 1](http://farm8.staticflickr.com/7442/9615146672_160a14da2e_c.jpg)
 
 ![Screenshot 2](http://farm6.staticflickr.com/5550/9615146788_7159540269_c.jpg)
+
+Request!
+======
+If anyone knows of something more fleshed-out/formal that does this same kind of thing please post a comment in the Issues area to let me know (or ping me on Twitter @emerson_chris). Thanks
