@@ -1,4 +1,4 @@
-MARWAV!
+MARWAV! (ALPHA)
 ======
 
 The multiple aspect ratio web app viewer. 
