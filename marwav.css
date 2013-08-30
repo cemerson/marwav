@@ -7,6 +7,7 @@
 #iframe_container_4{width:320px;height:568px;}  /* iphone 5 */
 #iframe_container_5{width:480px;height:800px;}  /* nexus one */
 #iframe_container_6{width:603px;height:966px;}  /* galaxy nexus  */
+#iframe_container_7{width:480px;height:800px;}  /* htc incredible   */
 
 
 *{
@@ -238,9 +239,14 @@ body.zoom_25 #device_checkboxes label,
   padding:5px 0 10px !important;
 }
 
-#iframe_url_form h1{
+#iframe_url_form h1:hover,
+#iframe_url_form h1:active{
+  color:#bbb;
+}
+ #iframe_url_form h1{
   color:#666;
   margin:0 auto !important;
+  cursor:pointer;
 }
 #iframe_url_reset{
   background-color:#444;

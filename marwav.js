@@ -1,15 +1,23 @@
+console.log('Welcome to MARWAV(alpha):\n\t ... The multiple aspect ratio web app viewer');
+
 var frameCount = 0;
 var url = "";
 var demoURL = 'http://www.alistapart.com';
-var maxDeviceCount = 6;
 var _enabledDeviceCount = 0;
-var labels = ["","iPad","Galaxy S 3/4","iPhone 3GS","iPhone 5","Nexus One","Galaxy Nexus"];
+var labels = ["","iPad","Galaxy S 3/4","iPhone 3GS","iPhone 5","Nexus One","Galaxy Nexus","HTC Incredible"];
+var maxDeviceCount = labels.length;
+console.log('\t... [' + maxDeviceCount-1 + '] devices are available to test with');
+
 var focusedIframe = "";
 var scale = 100;
 var randomID = new Date().getMilliseconds();
 var clickOrTouchEvent = 'mouseup touchend';
 
 $(document).ready(function(){
+
+	$('#iframe_url_form h1').bind('click touchstart',function(){
+		document.location.href = 'http://github.com/cemerson/marwav';
+	});
 
 	$(window).resize(function(){ refreshIFramesOrigin(); });
 
@@ -30,7 +38,8 @@ $(document).ready(function(){
 
 	// checkboxes
 	var checkboxHTML = "";
-	for(var d=1;d<labels.length;d++){
+	for(var d=0;d<maxDeviceCount;d++){
+		if(d==0) continue;
 
 		var _deviceIsEnabled = (localStorage.getItem('MARWAV_device_'+d) == 'checked');
 		var _checkedValue = "";
@@ -93,7 +102,9 @@ function loadUpDeviceViews(){
 		scale = $('#iframe_scale').val();
 
 		// save settings for next refresh
-		for(var d=1;d<labels.length;d++){
+		for(var d=0;d<maxDeviceCount;d++){
+			if(d==0) continue;
+
 			var _deviceIsEnabled = ($('#device_' + d).is(':checked'));
 			if(_deviceIsEnabled){
 				localStorage.setItem('MARWAV_device_'+d,'checked');
