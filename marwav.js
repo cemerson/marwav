@@ -45,7 +45,7 @@ $(document).ready(function(){
 		var _checkedValue = "";
 		if(_deviceIsEnabled) _checkedValue = " checked ";
 
-		checkboxHTML += '<input type="checkbox" ' + _checkedValue + ' id="device_' + d + '"><label for="device_' + d + '">' + labels[d] + '</label>';
+		checkboxHTML += '<input type="checkbox" ' + _checkedValue + ' checkbox_index="' + d + '" id="device_' + d + '"><label for="device_' + d + '">' + labels[d] + '</label>';
 	}
 
 	if(!!localStorage.getItem('MARWAV_scale_selected_index')){
@@ -55,6 +55,17 @@ $(document).ready(function(){
 	$('#device_checkboxes')
 		.remove('input,label')
 		.append(checkboxHTML);
+
+	$('input[type=checkbox]').bind('change',function(){
+			var _isChecked = ($(this).is(':checked'));
+			var _checkboxIndex = $(this).attr('checkbox_index');
+			var _itemsToToggle = $('#device_' + _checkboxIndex + ', label[for=device_' + _checkboxIndex + ']');
+			if(_isChecked){
+				$(_itemsToToggle).addClass('is_checked');
+			}else{
+				$(_itemsToToggle).removeClass('is_checked');
+			}
+	});
 });
 
 

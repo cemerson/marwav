@@ -202,13 +202,14 @@ body.zoom_25 #device_checkboxes label,
 #device_checkboxes label{
   margin: 0 19px 0 0px;
   font-size:.8em;
-  background-color:#333;
+  background-color:#111;
   padding: 6px 8px;
   border-radius: 10px;
   padding-left: 24px;
   margin-left: -22px;
   margin-right: 20px;
 }
+
 
 body.zoom_100 #device_checkboxes input,
 body.zoom_50 #device_checkboxes input,
@@ -229,8 +230,9 @@ body.zoom_25 #device_checkboxes label,
 
 #iframe_scale{
   margin-right: 18px;
-  background-color:#444;
+  background-color: #111;
   color:#fff;
+  border: 1px solid #444;
 }
 
 #iframe_url_form{
@@ -266,6 +268,10 @@ select, select{
   width:75% !important;
 }
 
+#iframe_url_demo, #iframe_url_submit{
+  background-color: rgb(77, 92, 62);
+  color:#fff;
+}
 
 #iframe_url_form h1 sup{
   font-size:.3em;
@@ -286,9 +292,20 @@ font-style:italic;
 letter-spacing:-2px;
 font-size:2.1em;
 }
+#iframe_url_form input[type=checkbox]{
+  opacity:.4;
+}
+#iframe_url_form input.is_checked{
+  opacity:1;
+}
+#iframe_url_form label.is_checked{
+  color:#fff;
+  
+  background-color:#444;
+}
 
 #iframe_url_form label{
-  color:#fff;
+  color:#888;
   text-align: center;
   width:auto !important;
 }
