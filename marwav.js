@@ -43,9 +43,14 @@ $(document).ready(function(){
 
 		var _deviceIsEnabled = (localStorage.getItem('MARWAV_device_'+d) == 'checked');
 		var _checkedValue = "";
-		if(_deviceIsEnabled) _checkedValue = " checked ";
+		var _checkClass = "";
+		if(_deviceIsEnabled){
+			_checkedValue = " checked ";
+			_checkClass = "is_checked"
+		}
 
-		checkboxHTML += '<input type="checkbox" ' + _checkedValue + ' checkbox_index="' + d + '" id="device_' + d + '"><label for="device_' + d + '">' + labels[d] + '</label>';
+		checkboxHTML += '<input type="checkbox" ' + _checkedValue + ' class="' + _checkClass + '" checkbox_index="' + d + '" id="device_' + d + '">' +
+										'<label for="device_' + d + '" class="' + _checkClass + '">' + labels[d] + '</label>';
 	}
 
 	if(!!localStorage.getItem('MARWAV_scale_selected_index')){
